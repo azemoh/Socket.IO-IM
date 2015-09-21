@@ -1,0 +1,83 @@
+body {
+  font-size: 14px;
+	font-family: "Raleway", "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #666;
+	margin: 0;
+	padding: 0;
+}
+
+* {	box-sizing: border-box; }
+h1 {text-align: center; }
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.message-area {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+	border-radius: 4px;
+	box-shadow: 0px 0px 15px rgba(#000, .3);
+	.head {
+		background: dodgerblue;
+		color: white;
+		padding: 10px;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#messages {
+		background: #f6f6f6;
+		padding: 10px 15px;
+		height: 350px;
+		overflow-y: scroll;
+		
+		.message {
+			margin-bottom: 20px;
+			padding: 8px;
+			border-radius: 4px;
+			background: white;
+			strong {
+				margin-right: 10px;
+			}
+		}
+	}
+	
+	.controls {
+		display: flex;
+		padding: 5px;
+		
+		.field {
+			flex: 1;
+			border: 2px solid #f2f2f2;
+			border-radius: 4px 0 0 4px;
+			&:focus { border: 2px solid dodgerblue; }
+		}
+		.button { border-radius: 0 4px 4px 0; }
+	}
+}
+
+%control {
+	padding: 10px 15px;
+	font-size: 16px;
+}
+
+.button {
+	@extend %control;
+	border: 0;
+	color: #fff;
+	background: dodgerblue;
+	font-weight: bold;
+}
+
+.field {
+	@extend %control;
+	border: 2px solid #ccc;
+	&:active, &:focus {
+		outline: 0 none;
+		border: 2px solid dodgerblue;
+	}
+}

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.wrapper
+		h1 Welcome to the Node Chatroom
+		.message-area
+			.head
+				strong Chat
+			#messages
+				
+			.controls
+				input.field(type="text" id="message-box" placeholder="Say something")
+				button#send-message-btn.button Send
+					
+block body_end
+	script(type="text/javascript" src="/js/index.js")
